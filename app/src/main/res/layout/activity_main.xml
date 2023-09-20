@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/cher">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_zapis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Записаться"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/monsesrat"
+        android:background="@drawable/universal_button"
+        android:paddingHorizontal="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/date_linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Запись на СВО"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/monsesrat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/date_linear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/date_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/time_linear"
+        app:layout_constraintStart_toStartOf="@id/btn_zapis"
+        android:layout_marginBottom="20dp"
+        >
+
+        <TextView
+            android:id="@+id/date_edit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:hint="Дата записи"
+            android:textColorHint="@color/gray"
+            android:fontFamily="@font/monsesrat"/>
+
+        <ImageButton
+            android:id="@+id/date_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_calendar"
+            android:background="#00000000"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/time_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btn_zapis">
+
+        <TextView
+            android:id="@+id/time_edit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:hint="Время записи"
+            android:textColorHint="@color/gray"
+            android:fontFamily="@font/monsesrat"
+            />
+
+        <ImageButton
+            android:id="@+id/time_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_watch"
+            android:background="#00000000"/>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
